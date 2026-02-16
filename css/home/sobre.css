@@ -275,6 +275,13 @@
     position: relative;
     top: -14px;
   }
+  .section-title {
+    font-size: 32px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .about-reveal,

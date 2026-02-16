@@ -171,11 +171,12 @@
   color: var(--primary);
 }
 
-.hero-stat-text h3 {
+.hero-stat-text .hero-stat-title {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 0px;
   color: rgb(255, 255, 255, 0.9);
+  line-height: 1.2;
 }
 
 .hero-stat-text p {

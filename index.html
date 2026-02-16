@@ -145,30 +145,30 @@
           </div>
 
           <div class="hero-stats">
-            <div class="hero-stat">
-              <div class="hero-stat-icon">
-                <svg width="28" height="28" fill=" none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <div class="hero-stat-text">
-                <h3>Suporte 24/7</h3>
-                <p>Sempre disponível</p>
-              </div>
+          <div class="hero-stat">
+            <div class="hero-stat-icon">
+              <svg width="28" height="28" fill=" none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
             </div>
-            <div class="hero-stat">
-              <div class="hero-stat-icon">
-                <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-              </div>
-              <div class="hero-stat-text">
-                <h3>Avaliação 5 estrelas</h3>
-                <p>Por usuários</p>
-              </div>
+            <div class="hero-stat-text">
+              <p class="hero-stat-title">Suporte 24/7</p>
+              <p>Sempre disponível</p>
+            </div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <div class="hero-stat-text">
+              <p class="hero-stat-title">Avaliação 5 estrelas</p>
+              <p>Por usuários</p>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
 
@@ -294,13 +294,13 @@
 
         <!-- Tabs -->
         <div class="tabs-container">
-          <div class="tabs">
-            <button class="tab-button active" type="button" data-tab="processo-urgencia">Urgência 24h</button>
-            <button class="tab-button" type="button" data-tab="processo-segunda-opiniao">Segunda Opinião</button>
+          <div class="tabs" role="tablist" aria-label="Escolha o tipo de atendimento">
+            <button class="tab-button active" type="button" id="tab-processo-urgencia" data-tab="processo-urgencia" aria-controls="processo-urgencia">Urgência 24h</button>
+            <button class="tab-button" type="button" id="tab-processo-segunda-opiniao" data-tab="processo-segunda-opiniao" aria-controls="processo-segunda-opiniao">Segunda Opinião</button>
           </div>
 
           <!-- Tab Content: Urgência -->
-          <div class="tab-content active" id="processo-urgencia">
+          <div class="tab-content active" id="processo-urgencia" role="tabpanel" aria-labelledby="tab-processo-urgencia">
             <div class="steps-grid-new">
               <div class="step-card-new">
                 <div class="step-large-number">01</div>
@@ -309,7 +309,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
                 </div>
-                <h4>Triagem Whats</h4>
+                <h3>Triagem Whats</h3>
                 <p>O contato inicia pelo WhatsApp para identificação rápida do seu problema.</p>
               </div>
 
@@ -320,7 +320,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h4>Tele-orientação</h4>
+                <h3>Tele-orientação</h3>
                 <p>Consulta por vídeo chamada com dentista especialista (R$ 99).</p>
               </div>
 
@@ -331,7 +331,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
-                <h4>Resolução</h4>
+                <h3>Resolução</h3>
                 <p>Monitoramento até a cura ou encaminhamento presencial seguro.</p>
               </div>
             </div>
@@ -339,7 +339,7 @@
             <div class="pricing-box">
               <div class="pricing-grid">
                 <div class="price-item">
-                  <h4>Investimento</h4>
+                  <h3>Investimento</h3>
                   <div class="price">
                     <div class="price-value">R$ 99</div>
                     <div class="price-label">teleconsulta</div>
@@ -350,7 +350,7 @@
                   </div>
                 </div>
                 <div class="price-item">
-                  <h4>Planos de Saúde</h4>
+                  <h3>Planos de Saúde</h3>
                   <p class="price-note">
                     Se você possui plano de saúde odontológico conveniado, o valor pode ser coberto pelo seu plano.
                   </p>
@@ -360,7 +360,7 @@
           </div>
 
           <!-- Tab Content: Segunda Opinião -->
-          <div class="tab-content" id="processo-segunda-opiniao">
+          <div class="tab-content" id="processo-segunda-opiniao" role="tabpanel" aria-labelledby="tab-processo-segunda-opiniao">
             <div class="steps-grid-new">
               <div class="step-card-new">
                 <div class="step-large-number">01</div>
@@ -369,7 +369,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                   </svg>
                 </div>
-                <h4>Envie seu Caso</h4>
+                <h3>Envie seu Caso</h3>
                 <p>Descreva seu caso e envie seus exames pelo WhatsApp para análise preliminar.</p>
               </div>
 
@@ -380,7 +380,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h4>Escolha o Especialista</h4>
+                <h3>Escolha o Especialista</h3>
                 <p>Receba opções de especialistas sêniores e escolha quem irá lhe atender.</p>
               </div>
 
@@ -391,7 +391,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h4>Consulta Agendada</h4>
+                <h3>Consulta Agendada</h3>
                 <p>Teleconsulta de até 45 minutos com orientações detalhadas para seu caso.</p>
               </div>
             </div>
@@ -610,7 +610,7 @@
         </div>
 
         <div class="footer-section">
-          <h4>Navegação</h4>
+          <h3>Navegação</h3>
           <div class="footer-links">
             <a href="#sobre">Sobre</a>
             <a href="#servicos">Serviços</a>
@@ -623,7 +623,7 @@
         </div>
 
         <div class="footer-section">
-          <h4>Serviços</h4>
+          <h3>Serviços</h3>
           <div class="footer-links">
             <a href="#servicos">Urgências Odontológicas</a>
             <a href="#servicos">Segunda Opinião</a>
@@ -631,7 +631,7 @@
         </div>
 
         <div class=" footer-section">
-          <h4>Contato</h4>
+          <h3>Contato</h3>
           <ul class="footer-contact">
             <li class="contact-item">
               <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -644,8 +644,8 @@
               <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <div>
-                <a href="tel:5532230177">(55)&nbsp;3223&#8209;0177</a><br>
+              <div class="contact-phones">
+                <a href="tel:5532230177">(55)&nbsp;3223&#8209;0177</a>
                 <a href="https://wa.me/5551995843675">(51)&nbsp;99584&#8209;3675</a>
               </div>
             </li>

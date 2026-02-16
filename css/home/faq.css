@@ -11,10 +11,6 @@
   padding: 0 24px;
 }
 
-.faq-list {
-  margin-top: 64px;
-}
-
 .faq-item {
   background: white;
   border-radius: 16px;
@@ -32,7 +28,7 @@
   padding: 28px 32px;
   cursor: pointer;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,4 +64,10 @@
   font-size: 16px;
   color: var(--text-secondary);
   line-height: 1.7;
+}
+
+@media (max-width: 968px) {
+  .faq-container {
+    padding: 0px;
+  }
 }

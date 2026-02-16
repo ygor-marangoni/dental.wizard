@@ -132,7 +132,7 @@
   height: 26px;
 }
 
-.step-card-new h4 {
+.step-card-new h3 {
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 12px;
@@ -174,7 +174,7 @@
   margin-bottom: 24px;
 }
 
-.step-card h4 {
+.step-card h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
@@ -235,7 +235,7 @@
     font-size: 54px;
   }
 
-  .step-card-new h4 {
+  .step-card-new h3 {
     font-size: 23px;
   }
 
@@ -268,7 +268,7 @@
     border-radius: 13px;
   }
 
-  .step-card-new h4 {
+  .step-card-new h3 {
     font-size: 21px;
   }
 

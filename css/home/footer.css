@@ -116,7 +116,7 @@
   margin-bottom: 0;
 }
 
-.footer-section h4 {
+.footer-section h3 {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -176,6 +176,17 @@
   color: rgba(218, 236, 233, 0.84);
   text-decoration: none;
   transition: color 0.25s ease;
+}
+
+.contact-phones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-phones a {
+  display: inline-flex;
+  align-items: center;
 }
 
 .contact-item a:hover {
@@ -299,7 +310,7 @@
     margin-bottom: 28px;
   }
 
-  .footer-section h4 {
+  .footer-section h3 {
     margin-bottom: 12px;
   }
 

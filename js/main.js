@@ -1,10 +1,15 @@
 // Tabs functionality
 document.querySelectorAll('.tabs-container').forEach(tabsContainer => {
+  const tabList = tabsContainer.querySelector('.tabs');
   const tabButtons = Array.from(tabsContainer.querySelectorAll('.tab-button'));
   const tabContents = Array.from(tabsContainer.querySelectorAll('.tab-content'));
 
   if (!tabButtons.length || !tabContents.length) {
     return;
+  }
+
+  if (tabList) {
+    tabList.setAttribute('role', 'tablist');
   }
 
   const setActiveTab = (tabId) => {
@@ -18,18 +23,33 @@ document.querySelectorAll('.tabs-container').forEach(tabsContainer => {
       const isActive = button.getAttribute('data-tab') === tabId;
       button.classList.toggle('active', isActive);
       button.setAttribute('aria-selected', String(isActive));
+      button.setAttribute('tabindex', isActive ? '0' : '-1');
     });
 
     tabContents.forEach(panel => {
-      panel.classList.toggle('active', panel.id === tabId);
+      const isActive = panel.id === tabId;
+      panel.classList.toggle('active', isActive);
+      panel.hidden = !isActive;
+      panel.setAttribute('aria-hidden', String(!isActive));
     });
   };
 
   tabButtons.forEach(button => {
     const tabId = button.getAttribute('data-tab');
+    const buttonId = tabId ? `tab-${tabId}` : '';
+
     button.setAttribute('type', 'button');
     button.setAttribute('role', 'tab');
     button.setAttribute('aria-selected', String(button.classList.contains('active')));
+    button.setAttribute('tabindex', button.classList.contains('active') ? '0' : '-1');
+
+    if (tabId) {
+      button.setAttribute('aria-controls', tabId);
+    }
+
+    if (buttonId) {
+      button.id = buttonId;
+    }
 
     button.addEventListener('click', () => {
       if (!tabId) {
@@ -47,6 +67,16 @@ document.querySelectorAll('.tabs-container').forEach(tabsContainer => {
   if (initialTabId) {
     setActiveTab(initialTabId);
   }
+
+  tabContents.forEach(panel => {
+    panel.setAttribute('role', 'tabpanel');
+    panel.setAttribute('tabindex', '0');
+    panel.setAttribute('aria-labelledby', `tab-${panel.id}`);
+    if (!panel.classList.contains('active')) {
+      panel.hidden = true;
+      panel.setAttribute('aria-hidden', 'true');
+    }
+  });
 });
 
 // FAQ Toggle
