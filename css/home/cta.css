@@ -1,0 +1,60 @@
+.cta-card {
+  background: var(--primary);
+  border-radius: 32px;
+  padding: 64px;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-card::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  bottom: -100px;
+  right: -100px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cta-card h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-card p {
+  font-size: 20px;
+  opacity: 0.9;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-card .btn-secondary {
+  background: white;
+  color: var(--primary);
+  border: none;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-card .btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 640px) {
+  .cta-card {
+    padding: 40px 24px;
+  }
+
+  .cta-card h2 {
+    font-size: 32px;
+  }
+}

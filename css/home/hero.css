@@ -1,0 +1,265 @@
+/* Hero */
+.hero {
+  padding: 160px 0 120px;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 100%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(5, 18, 17, 0.85) 0%,
+    rgba(9, 47, 44, 0.7) 70%,
+    rgba(13, 148, 136, 0.18) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero-badge,
+.hero h1,
+.hero p,
+.hero-actions,
+.hero-stats {
+  opacity: 0;
+  transform: translateY(24px);
+  filter: blur(3px);
+  animation: heroContentReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-badge {
+  animation-delay: 0.14s;
+}
+
+.hero h1 {
+  animation-delay: 0.28s;
+}
+
+.hero p {
+  animation-delay: 0.42s;
+}
+
+.hero-actions {
+  animation-delay: 0.56s;
+}
+
+.hero-stats {
+  animation-delay: 0.72s;
+}
+
+@keyframes heroContentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  padding: 10px 20px;
+  border-radius: 100px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgba(240, 253, 252, 0.9);
+  border: 1px solid rgba(13, 148, 136, 0.3);
+}
+.hero-badge img {
+  width: 18px;
+  height: 18px;
+}
+
+.hero h1 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+  max-width: 800px;
+  color: #fff;
+}
+
+.hero h1 .highlight {
+  color: var(--primary-light);
+}
+
+.hero p {
+  font-size: 22px;
+  color: rgb(255, 255, 255, 0.8);
+  line-height: 1.5;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 480px;
+  height: 580px;
+  border-radius: 32px;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 148, 136, 0.1) 0%,
+    rgba(13, 148, 136, 0.2) 100%
+  );
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  margin-top: 64px;
+}
+
+.hero-stat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-stat-icon {
+  width: 48px;
+  height: 48px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.hero-stat-text h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  color: rgb(255, 255, 255, 0.9);
+}
+
+.hero-stat-text p {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  color: rgb(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .hero-image {
+    display: none;
+  }
+}
+
+@media (max-width: 968px) {
+  .hero {
+    padding: 150px 0 80px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 40px;
+    line-height: 1.05;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: fit-content;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-badge {
+    font-size: 15px;
+    max-width: 430px;
+    line-height: 1.35;
+    gap: 14px;
+    padding-right: 34px;
+    display: none;
+  }
+
+  .hero-badge img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-badge img::after {
+    content: '';
+    height: 100%;
+    width: 21px;
+    background: rgba(255, 255, 255, 1);
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-badge,
+  .hero h1,
+  .hero p,
+  .hero-actions,
+  .hero-stats {
+    animation: none !important;
+  }
+
+  .hero-badge,
+  .hero h1,
+  .hero p,
+  .hero-actions,
+  .hero-stats {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}

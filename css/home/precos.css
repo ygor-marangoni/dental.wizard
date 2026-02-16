@@ -1,0 +1,198 @@
+.pricing-box {
+  position: relative;
+  overflow: hidden;
+  background: #f8faf9;
+  border-radius: 24px;
+  padding: 38px 40px;
+  margin-top: 0;
+  border: 1px solid rgba(13, 148, 136, 0.2);
+}
+
+.pricing-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 82px;
+  height: 3px;
+  border-radius: 0 0 999px 999px;
+  background: rgba(13, 148, 136, 0.68);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  gap: 34px;
+  align-items: stretch;
+}
+
+.pricing-grid .price-item:first-child {
+  padding-right: 8px;
+}
+
+.pricing-grid .price-item:last-child {
+  padding-left: 32px;
+  border-left: 1px solid rgba(0, 29, 27, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.price-item h4 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 18px;
+  color: #142523;
+}
+
+.price {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 0;
+}
+
+.price + .price {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(0, 29, 27, 0.14);
+}
+
+.price-value {
+  font-size: clamp(50px, 3.5vw, 62px);
+  font-weight: 600;
+  line-height: 0.94;
+  letter-spacing: -0.03em;
+  color: var(--primary);
+}
+
+.price-label {
+  font-size: 17px;
+  line-height: 1.35;
+  color: #5d6665;
+}
+
+.price-note {
+  max-width: 38ch;
+  font-size: 17px;
+  line-height: 1.72;
+  color: #5d6665;
+  margin: 0;
+}
+
+.price-center {
+  min-height: 122px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.price-center::before {
+  content: 'Consulta Especializada';
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(0, 29, 27, 0.58);
+  margin-bottom: 6px;
+}
+
+.price-centered {
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 0;
+  gap: 14px;
+}
+
+.price-value-large {
+  font-size: clamp(58px, 5vw, 82px);
+}
+
+.price-label-large {
+  font-size: 19px;
+  line-height: 1.35;
+  color: #5d6665;
+}
+
+@media (max-width: 968px) {
+  .pricing-box {
+    padding: 32px 26px;
+    border-radius: 20px;
+  }
+
+  .pricing-box::before {
+    left: 26px;
+    width: 72px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .pricing-grid .price-item:first-child {
+    padding-right: 0;
+  }
+
+  .pricing-grid .price-item:last-child {
+    padding-left: 0;
+    padding-top: 20px;
+    border-left: 0;
+    border-top: 1px solid rgba(0, 29, 27, 0.12);
+  }
+
+  .price-item h4 {
+    font-size: 21px;
+  }
+
+  .price-value {
+    font-size: clamp(42px, 11vw, 56px);
+  }
+
+  .price-centered {
+    flex-wrap: wrap;
+  }
+
+  .price-label-large {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing-box {
+    padding: 24px 18px;
+  }
+
+  .pricing-box::before {
+    left: 18px;
+    width: 64px;
+  }
+
+  .price-item h4 {
+    font-size: 19px;
+  }
+
+  .price-label,
+  .price-label-large {
+    font-size: 15px;
+  }
+
+  .price-note {
+    font-size: 15px;
+  }
+
+  .price-center {
+    min-height: 108px;
+    gap: 8px;
+  }
+
+  .price-center::before {
+    font-size: 11px;
+  }
+}
